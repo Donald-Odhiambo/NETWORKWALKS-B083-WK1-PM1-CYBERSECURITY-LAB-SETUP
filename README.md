@@ -257,10 +257,15 @@ NetworkManager CLI Guide: https://wiki.archlinux.org/title/NetworkManager
 VirtualBox Networking: https://www.virtualbox.org/manual/ch06.html
 
 👤 Author Information
+
 Donald Oketch
+
 Cybersecurity Intern B083
+
 NetworkWalks Academy | Week 01
+
 LinkedIn: 
+
 GitHub: https://github.com/Donald-Odhiambo
 
 📌 Project Metadata
