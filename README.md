@@ -174,8 +174,11 @@ Internet Connectivity	ping -c 4 8.8.8.8	4/4 packets received	✅ Pass
 DNS Resolution	nslookup networkwalks.com	Non-authoritative answer: IP shown	✅ Pass
 Nmap Installation	nmap --version	Nmap 7.94+ displayed	✅ Pass
 Snapshot Restoration	Restore → ip a	IP reverts to 10.0.0.2	✅ Pass
+
 🐞 Troubleshooting Log
+
 Problem 1: Loss of Internet After Static IP Configuration
+
 Symptom: No outbound connectivity after applying static IP.
 
 Root Cause: NetworkManager duplicate address detection (DAD) timeout conflict.
@@ -184,11 +187,15 @@ Solution:
 
 bash
 nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+
 nmcli connection down "Wired connection 1"
+
 nmcli connection up "Wired connection 1"
+
 Lesson: Always verify connection name with nmcli connection show before modifying.
 
 Problem 2: VT-x / AMD-V Hardware Virtualization Disabled
+
 Symptom: VM fails to start with error: VT-x is disabled in BIOS.
 
 Root Cause: BIOS/UEFI virtualization extensions not enabled.
@@ -206,6 +213,7 @@ Save & Exit → Boot Windows → Start VM.
 Verification: System Information → Hyper-V Requirements → Virtualization Enabled: Yes
 
 Problem 3: Shared Folder Not Mounting
+
 Symptom: /media/sf_LabFiles missing or permission denied.
 
 Solution:
@@ -227,6 +235,7 @@ Snapshot Management: Learned to create, restore, and document VM snapshots for l
 Professional Documentation: Recognized the importance of structured reports, troubleshooting logs, and version control in cybersecurity projects.
 
 🔐 Ethical and Legal Compliance
+
 Authorization: All testing confined to owned or explicitly authorized systems.
 
 Isolation: Lab network segregated from host LAN and internet via NAT Network boundaries.
@@ -236,6 +245,7 @@ Accountability: All activities logged and documented for academic and profession
 Compliance: Adheres to Kenyan Computer Misuse and Cybercrimes Act (2018) and international ethical hacking standards.
 
 🔗 Tools and Resources
+
 7-Zip: https://7-zip.org/download.html
 
 VirtualBox: https://virtualbox.org/wiki/Downloads
@@ -247,11 +257,11 @@ NetworkManager CLI Guide: https://wiki.archlinux.org/title/NetworkManager
 VirtualBox Networking: https://www.virtualbox.org/manual/ch06.html
 
 👤 Author Information
-Waqas Karim
-Cybersecurity Professional B082
+Donald Oketch
+Cybersecurity Intern B083
 NetworkWalks Academy | Week 01
-LinkedIn: linkedin.com/in/waqaskarim
-GitHub: github.com/waqaskarim (recommended addition)
+LinkedIn: 
+GitHub: https://github.com/Donald-Odhiambo
 
 📌 Project Metadata
 Field	Value
