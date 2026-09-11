@@ -55,7 +55,7 @@ This laboratory serves as a dedicated, ethical, and legally compliant environmen
 
 8. Defensive monitoring and incident response simulation
 
-⚠️ Ethical and Legal Notice: This laboratory must only be used against systems you own, control, or have explicit written permission to test. Never direct lab tools or techniques toward unauthorized networks, devices, or services. All activities must comply with applicable laws, institutional policies, and professional ethical standards (e.g., EC-Council Code of Ethics, (ISC)² Canons).
+⚠️ Disclaimer: This laboratory must only be used against systems you own, control, or have explicit written permission to test. Never direct lab tools or techniques toward unauthorized networks, devices, or services. All activities must comply with applicable laws, institutional policies, and professional ethical standards (e.g., EC-Council Code of Ethics, (ISC)² Canons).
 
 🏗️ The Lab Architecture
 
@@ -103,7 +103,8 @@ Tool: VirtualBox 7.2 + Extension Pack
 Post-Install: Enable USB 3.0, VirtualBox Bridged Networking, and Host-Only Ethernet Adapter.
 
 Step 3: Create NAT Network
-Path: File → Tools → Network Manager → NAT Networks → Create
+Path: File → Tools → Network  → NAT Networks → Create
+<img width="1912" height="1039" alt="Network_Config" src="https://github.com/user-attachments/assets/70aa814c-b0bf-4cc8-802a-7b0e67b7cc72" />
 
 Configuration:
 
