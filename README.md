@@ -228,8 +228,7 @@ Cybersecurity Intern B083
 
 NetworkWalks Academy | Week 01
 
-LinkedIn: 
-
+LinkedIn:https://www.linkedin.com/in/oketch-donald-odhiambo-0a6823429
 GitHub: https://github.com/Donald-Odhiambo
 
 📌 Project Metadata
