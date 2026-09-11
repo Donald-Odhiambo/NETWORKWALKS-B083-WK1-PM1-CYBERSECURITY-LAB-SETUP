@@ -123,7 +123,8 @@ Rationale: NAT Network allows inter-VM communication + outbound internet, unlike
 Step 4: Import Kali Linux VM
 Source: Kali Linux Official Pre-Built VMs
 
-Import Path: File → Import Appliance → Select .ova → Review → Import
+Import Path: File → Open → Select .ova → Review → Open  or Right Click the .over file then select "Open with Virtualbox"
+<img width="919" height="691" alt="Import Kali  Machine" src="https://github.com/user-attachments/assets/eff9db16-45a0-463e-8bf0-f815dd562219" />
 
 Network Adapter:
 
@@ -133,13 +134,8 @@ Adapter Type: Intel PRO/1000 MT Desktop
 
 Resources: 4096 MB RAM, 2 CPU cores (if available)
 
-Shared Folder:
+<img width="941" height="556" alt="Kali_Nat Network Config" src="https://github.com/user-attachments/assets/e28b2374-2053-4755-a454-31a8723856b8" />
 
-Path: C:\Users\<YourUser>\LabFiles
-
-Mount Point: /media/sf_LabFiles
-
-Options: Auto-mount, Make Permanent
 
 Step 5: Configure Static IP on Kali
 Method: GUI
@@ -148,6 +144,8 @@ Method: GUI
 
 Step 6: Create Baseline Snapshot
 Name: Clean Kali – Network Setup
+
+<img width="1482" height="933" alt="Kali_Snapshot" src="https://github.com/user-attachments/assets/b44b83c8-08d0-4164-b3a1-5ff6d4e4549c" />
 
 Description: "Baseline configuration with static IP, shared folder, and NAT Network. Safe to restore before risky exercises."
 
@@ -187,34 +185,6 @@ nmcli connection up "Wired connection 1"
 
 Lesson: Always verify connection name with nmcli connection show before modifying.
 
-Problem 2: VT-x / AMD-V Hardware Virtualization Disabled
-
-Symptom: VM fails to start with error: VT-x is disabled in BIOS.
-
-Root Cause: BIOS/UEFI virtualization extensions not enabled.
-
-Resolution:
-
-Reboot → Enter BIOS/UEFI (F2/Del).
-
-Navigate to Advanced → CPU Configuration.
-
-Enable Intel VT-x or AMD-V.
-
-Save & Exit → Boot Windows → Start VM.
-
-Verification: System Information → Hyper-V Requirements → Virtualization Enabled: Yes
-
-Problem 3: Shared Folder Not Mounting
-
-Symptom: /media/sf_LabFiles missing or permission denied.
-
-Solution:
-
-bash
-sudo usermod -aG vboxsf $USER
-sudo reboot
-Verification: ls /media/sf_LabFiles
 
 💡 Key Learning Outcomes
 
