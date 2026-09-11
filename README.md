@@ -87,8 +87,11 @@ Kali IP Address	10.0.0.2/24 (static)
 Default Gateway	10.0.0.1
 DNS Server	8.8.8.8 (Google Public DNS)
 Future VM Range	10.0.0.3–10.0.0.99 (DHCP or static)
+
 🪜 Implementation Procedure
+
 Step 1: Install 7-Zip
+
 Purpose: Extract .7z archives containing Kali Linux OVA or ISO files.
 
 Tool: 7-Zip 23.01
