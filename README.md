@@ -103,7 +103,9 @@ Tool: VirtualBox 7.2 + Extension Pack
 Post-Install: Enable USB 3.0, VirtualBox Bridged Networking, and Host-Only Ethernet Adapter.
 
 Step 3: Create NAT Network
+
 Path: File → Tools → Network  → NAT Networks → Create
+
 <img width="1912" height="1039" alt="Network_Config" src="https://github.com/user-attachments/assets/70aa814c-b0bf-4cc8-802a-7b0e67b7cc72" />
 
 Configuration:
@@ -129,7 +131,7 @@ Adapter 1: Attached to NAT Network, Name: NatNetwork
 
 Adapter Type: Intel PRO/1000 MT Desktop
 
-Resources: 2048 MB RAM, 2 CPU cores (if available)
+Resources: 4096 MB RAM, 2 CPU cores (if available)
 
 Shared Folder:
 
@@ -140,30 +142,18 @@ Mount Point: /media/sf_LabFiles
 Options: Auto-mount, Make Permanent
 
 Step 5: Configure Static IP on Kali
-Method: NetworkManager CLI (nmcli)
+Method: GUI
 
-Commands:
+<img width="709" height="553" alt="Static_IP Config" src="https://github.com/user-attachments/assets/2d00dd8f-a92c-4e30-99e7-437009db3e1b" />
 
-bash
-nmcli connection modify "Wired connection 1" \
-  ipv4.addresses 10.0.0.2/24 \
-  ipv4.gateway 10.0.0.1 \
-  ipv4.dns "8.8.8.8" \
-  ipv4.method manual
-nmcli connection up "Wired connection 1"
-Verification:
-
-bash
-ip a show eth0
-ping -c 4 10.0.0.1
-ping -c 4 8.8.8.8
-nslookup kali.org
 Step 6: Create Baseline Snapshot
 Name: Clean Kali – Network Setup
 
 Description: "Baseline configuration with static IP, shared folder, and NAT Network. Safe to restore before risky exercises."
 
 Path: Machine → Take Snapshot
+
+<img width="1482" height="933" alt="Kali_Snapshot" src="https://github.com/user-attachments/assets/f416f594-e831-4dc5-80a6-96ca214e7b8f" />
 
 Best Practice: Snapshot before every major tool installation or configuration change.
 
@@ -192,6 +182,8 @@ nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
 nmcli connection down "Wired connection 1"
 
 nmcli connection up "Wired connection 1"
+
+<img width="1010" height="429" alt="Diagnosting_Internet Connection Problem" src="https://github.com/user-attachments/assets/01103b1c-de13-4e6b-8d38-cc5cc4122218" />
 
 Lesson: Always verify connection name with nmcli connection show before modifying.
 
@@ -225,25 +217,26 @@ sudo reboot
 Verification: ls /media/sf_LabFiles
 
 💡 Key Learning Outcomes
-NAT vs. NAT Network: NAT Network enables multi-VM communication + internet; standard NAT isolates VMs from each other.
 
-VirtualBox Networking Modes: Understood trade-offs between NAT, NAT Network, Host-Only, and Bridged for security labs.
+1. NAT vs. NAT Network: NAT Network enables multi-VM communication + internet; standard NAT isolates VMs from each other.
 
-Static IP Configuration: Mastered nmcli for persistent IPv4 settings in Kali Linux.
+2. VirtualBox Networking Modes: Understood trade-offs between NAT, NAT Network, Host-Only, and Bridged for security labs.
 
-Snapshot Management: Learned to create, restore, and document VM snapshots for lab reproducibility.
+3. Static IP Configuration: Mastered nmcli for persistent IPv4 settings in Kali Linux.
 
-Professional Documentation: Recognized the importance of structured reports, troubleshooting logs, and version control in cybersecurity projects.
+4. Snapshot Management: Learned to create, restore, and document VM snapshots for lab reproducibility.
+
+5. Professional Documentation: Recognized the importance of structured reports, troubleshooting logs, and version control in cybersecurity projects.
 
 🔐 Ethical and Legal Compliance
 
-Authorization: All testing confined to owned or explicitly authorized systems.
+1. Authorization: All testing confined to owned or explicitly authorized systems.
 
-Isolation: Lab network segregated from host LAN and internet via NAT Network boundaries.
+2. Isolation: Lab network segregated from host LAN and internet via NAT Network boundaries.
 
-Accountability: All activities logged and documented for academic and professional review.
+3. Accountability: All activities logged and documented for academic and professional review.
 
-Compliance: Adheres to Kenyan Computer Misuse and Cybercrimes Act (2018) and international ethical hacking standards.
+4. Compliance: Adheres to Kenyan Computer Misuse and Cybercrimes Act (2018) and international ethical hacking standards.
 
 🔗 Tools and Resources
 
@@ -271,9 +264,9 @@ GitHub: https://github.com/Donald-Odhiambo
 
 📌 Project Metadata
 Field	Value
-Program	Cybersecurity Diploma, NetworkWalks Academy
+Program	Cybersecurity Internship, NetworkWalks Academy
 Week	01
 Project Title	Cybersecurity & Penetration Testing Lab Setup
-Repository	GitHub (private/public)
+Repository	GitHub (public)
 Version	1.0
 Last Updated	September 10, 2026
