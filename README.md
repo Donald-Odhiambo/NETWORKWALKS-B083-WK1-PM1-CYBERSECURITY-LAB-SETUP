@@ -8,7 +8,7 @@ Design and Implementation of an Isolated Virtual Laboratory for Authorized Penet
 
 This project documents the design, deployment, and validation of a secure, isolated virtual cybersecurity laboratory using Oracle VM VirtualBox 7.2 and Kali Linux 2026.2. The lab provides a reproducible, controlled environment for practicing authorized security-testing activities—including network reconnaissance, vulnerability assessment, exploitation, and tool experimentation—while maintaining strict isolation from production networks and unauthorized systems.
 
-The architecture leverages a NAT Network to enable inter-VM communication and controlled internet access, supporting future expansion with additional target machines (e.g., Metasploitable, DVWA, Windows clients). Comprehensive documentation, snapshot management, and ethical governance ensure the lab meets academic, professional, and legal standards for responsible cybersecurity practice.
+The architecture leverages a NAT Network to enable inter-VM communication and controlled internet access, supporting future expansion with additional target machines (e.g., Metasploitable, DVWA, Windows clients, Android Target  etc). Comprehensive documentation, snapshot management, and ethical governance ensure the lab meets academic, professional, and legal standards for responsible cybersecurity practice.
 
 🎯 Project Objectives
 
@@ -74,19 +74,9 @@ Static IP for Kali: Ensures consistent referencing in documentation, scripts, an
 Shared Folder: Facilitates secure file transfer between host and guest without exposing the lab to external networks.
 
 ⚙️ Lab Configuration Specifications
-Component	Specification
-Host OS	Windows 10 (64-bit)
-Host RAM	8 GB
-Processor	Intel Core i7 (with VT-x enabled)
-Hypervisor	Oracle VM VirtualBox 7.2
-Security OS	Kali Linux 2026.2 (Official OVA)
-Kali RAM Allocation	2048 MB
-Virtual Network	NAT Network (NatNetwork)
-Network Address	10.0.0.0/24
-Kali IP Address	10.0.0.2/24 (static)
-Default Gateway	10.0.0.1
-DNS Server	8.8.8.8 (Google Public DNS)
-Future VM Range	10.0.0.3–10.0.0.99 (DHCP or static)
+
+![Uploading Lab_Specification.png…]()
+
 
 🪜 Implementation Procedure
 
