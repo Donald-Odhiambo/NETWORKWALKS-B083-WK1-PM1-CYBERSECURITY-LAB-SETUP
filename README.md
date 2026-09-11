@@ -74,8 +74,8 @@ Static IP for Kali: Ensures consistent referencing in documentation, scripts, an
 Shared Folder: Facilitates secure file transfer between host and guest without exposing the lab to external networks.
 
 ⚙️ Lab Configuration Specifications
+<img width="732" height="503" alt="Lab_Specification" src="https://github.com/user-attachments/assets/21ad94d4-b77a-49b6-b560-90ec74e1d674" />
 
-![Uploading Lab_Specification.png…]()
 
 
 🪜 Implementation Procedure
